@@ -1,15 +1,159 @@
-<!DOCTYPE html>
-<html data-bs-theme="light" lang="en-US" dir="ltr" xmlns:th="http://www.thymeleaf.org">
+<!doctype html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 
 <th:block th:fragment="footer">
-	<footer class="footer">
-	  <div class="row g-0 justify-content-between fs-10 mt-4 mb-3">
-	    <div class="col-12 col-sm-auto text-center">
-	      <p class="mb-0 text-600">Thank you for creating with Falcon <span class="d-none d-sm-inline-block">| </span><br class="d-sm-none" /> 2024 &copy; <a href="https://themewagon.com">Themewagon</a></p>
-	    </div>
-	    <div class="col-12 col-sm-auto text-center">
-	      <p class="mb-0 text-600">v3.23.0</p>
-	    </div>
-	  </div>
-	</footer>
+	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
+      <!--begin::Footer-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.10.1/browser/overlayscrollbars.browser.es6.min.js"
+      integrity="sha256-dghWARbRe2eLlIJ56wNB+b760ywulqK3DzZYEpsg2fQ="
+      crossorigin="anonymous"
+    ></script>
+    <!--end::Third Party Plugin(OverlayScrollbars)--><!--begin::Required Plugin(popperjs for Bootstrap 5)-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <!--end::Required Plugin(popperjs for Bootstrap 5)--><!--begin::Required Plugin(Bootstrap 5)-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <!--end::Required Plugin(Bootstrap 5)--><!--begin::Required Plugin(AdminLTE)-->
+    <script src="/xdm/AdminLTE/js/adminlte.js"></script>
+    <!--end::Required Plugin(AdminLTE)--><!--begin::OverlayScrollbars Configure-->
+	<script src="/xdm/jquery/jquery-3.7.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	
+<script>
+	jQuery.datetimepicker.setLocale('ko');
+
+	jQuery('#shDateStart').datetimepicker({
+	 i18n:{
+	  de:{
+	   months:[
+	    '1월','2월','3월','4월',
+	    '5월','6월','7월','8월',
+	    '9월','10월','11월','12월',
+	   ],
+	   dayOfWeek:[
+	    "일.", "월", "화", "수",
+	    "목", "금", "토.",
+	   ]
+	  }
+	 },
+	 timepicker:false,
+	 format:'Y.m.d'
+	});
+	
+	jQuery('#shDateEnd').datetimepicker({
+	 i18n:{
+	  de:{
+	   months:[
+	    '1월','2월','3월','4월',
+	    '5월','6월','7월','8월',
+	    '9월','10월','11월','12월',
+	   ],
+	   dayOfWeek:[
+	    "일.", "월", "화", "수",
+	    "목", "금", "토.",
+	   ]
+	  }
+	 },
+	 timepicker:false,
+	 format:'Y.m.d'
+	});
+	
+	jQuery('#shYearStart').datetimepicker({
+	 i18n:{
+	  de:{
+	   months:[
+	    '1월','2월','3월','4월',
+	    '5월','6월','7월','8월',
+	    '9월','10월','11월','12월',
+	   ],
+	   dayOfWeek:[
+	    "일.", "월", "화", "수",
+	    "목", "금", "토.",
+	   ]
+	  }
+	 },
+	 timepicker:false,
+	 format:'Y.m.d'
+	});
+
+	
+	jQuery('#shYearEnd').datetimepicker({
+	 i18n:{
+	  de:{
+	   months:[
+	    '1월','2월','3월','4월',
+	    '5월','6월','7월','8월',
+	    '9월','10월','11월','12월',
+	   ],
+	   dayOfWeek:[
+	    "일.", "월", "화", "수",
+	    "목", "금", "토.",
+	   ]
+	  }
+	 },
+	 timepicker:false,
+	 format:'Y.m.d'
+	});
+
+
+</script>
+
+	<script>
+		const URL_SIGNIN_FORM_XDM = "/login/Login"
+		const URL_SIGNOUT_PROC_XDM = "/login/signoutXdmProc"
+		const URL_INDEX_VIEW_XDM = "/v1/infra/index/indexXdmView"
+		
+		$("#btnSignout").on("click", function(){
+			$.ajax({
+				async: true 
+				,cache: false
+				,type: "post"
+				,url: URL_SIGNOUT_PROC_XDM
+				,data: {}
+				,success: function(response) {
+					if(response.rt == "success") {
+						location.href = URL_SIGNIN_FORM_XDM;
+					} else {
+						// by pass
+					}
+				}
+				,error : function(jqXHR, textStatus, errorThrown){
+					alert("ajaxUpdate " + jqXHR.textStatus + " : " + jqXHR.errorThrown);
+				}
+			});
+		});
+				
+	</script>
+    <footer class="app-footer">
+        <!--begin::To the end-->
+        <div class="float-end d-none d-sm-inline">Anything you want</div>
+        <!--end::To the end-->
+        <!--begin::Copyright-->
+        <strong>
+          Copyright &copy; 2014-2024&nbsp;
+          <a href="https://adminlte.io" class="text-decoration-none">AdminLTE.io</a>.
+        </strong>
+        All rights reserved.
+        <!--end::Copyright-->
+      </footer>
+      <!--end::Footer-->
+    </div>
+    <!--end::App Wrapper-->
+    <!--begin::Script-->
+    <!--begin::Third Party Plugin(OverlayScrollbars)-->
+
+    <!--end::OverlayScrollbars Configure-->
+    <!--end::Script-->
+  </body>
+  <!--end::Body-->
+</html>
 </th:block>

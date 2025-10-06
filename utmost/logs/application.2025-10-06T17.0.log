@@ -1,0 +1,136 @@
+2025-10-06T17:00:00.306 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2025-10-06T17:00:00.307 [Thread-145] INFO o.s.b.w.e.t.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete 
+2025-10-06T17:00:00.308 [tomcat-shutdown] INFO o.a.c.h.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8099"] 
+2025-10-06T17:00:00.378 [tomcat-shutdown] INFO o.s.b.w.e.t.GracefulShutdown - Graceful shutdown complete 
+2025-10-06T17:00:00.379 [Thread-145] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8099"] 
+2025-10-06T17:00:00.447 [restartedMain] INFO c.u.UtmostApplication - Starting UtmostApplication using Java 17.0.13 with PID 20812 (C:\factory\ws_sts_4281\repo_utmost\utmost\bin\main started by Jun in C:\factory\ws_sts_4281\repo_utmost\utmost) 
+2025-10-06T17:00:00.447 [restartedMain] INFO c.u.UtmostApplication - The following 1 profile is active: "external" 
+2025-10-06T17:00:00.638 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8099 (http) 
+2025-10-06T17:00:00.638 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8099"] 
+2025-10-06T17:00:00.638 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2025-10-06T17:00:00.638 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46] 
+2025-10-06T17:00:00.654 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2025-10-06T17:00:00.654 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 206 ms 
+2025-10-06T17:00:00.742 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2025-10-06T17:00:00.747 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8099"] 
+2025-10-06T17:00:00.750 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8099 (http) with context path '/' 
+2025-10-06T17:00:00.755 [restartedMain] INFO c.u.UtmostApplication - Started UtmostApplication in 0.33 seconds (process running for 6999.836) 
+2025-10-06T17:00:00.755 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2025-10-06T17:00:05.329 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2025-10-06T17:00:05.332 [Thread-152] INFO o.s.b.w.e.t.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete 
+2025-10-06T17:00:05.333 [tomcat-shutdown] INFO o.a.c.h.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8099"] 
+2025-10-06T17:00:05.410 [tomcat-shutdown] INFO o.s.b.w.e.t.GracefulShutdown - Graceful shutdown complete 
+2025-10-06T17:00:05.411 [Thread-152] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8099"] 
+2025-10-06T17:00:05.477 [restartedMain] INFO c.u.UtmostApplication - Starting UtmostApplication using Java 17.0.13 with PID 20812 (C:\factory\ws_sts_4281\repo_utmost\utmost\bin\main started by Jun in C:\factory\ws_sts_4281\repo_utmost\utmost) 
+2025-10-06T17:00:05.478 [restartedMain] INFO c.u.UtmostApplication - The following 1 profile is active: "external" 
+2025-10-06T17:00:05.668 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8099 (http) 
+2025-10-06T17:00:05.668 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8099"] 
+2025-10-06T17:00:05.668 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2025-10-06T17:00:05.668 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46] 
+2025-10-06T17:00:05.686 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2025-10-06T17:00:05.686 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 207 ms 
+2025-10-06T17:00:05.769 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2025-10-06T17:00:05.774 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8099"] 
+2025-10-06T17:00:05.777 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8099 (http) with context path '/' 
+2025-10-06T17:00:05.781 [restartedMain] INFO c.u.UtmostApplication - Started UtmostApplication in 0.326 seconds (process running for 7004.862) 
+2025-10-06T17:00:05.782 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2025-10-06T17:01:03.752 [http-nio-8099-exec-1] INFO o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2025-10-06T17:01:03.752 [http-nio-8099-exec-1] INFO o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2025-10-06T17:01:03.753 [http-nio-8099-exec-1] INFO o.s.w.s.DispatcherServlet - Completed initialization in 1 ms 
+2025-10-06T17:08:50.658 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1363 class path changes (1138 additions, 225 deletions, 0 modifications) 
+2025-10-06T17:08:50.658 [Thread-156] INFO o.s.b.w.e.t.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete 
+2025-10-06T17:08:50.659 [tomcat-shutdown] INFO o.a.c.h.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8099"] 
+2025-10-06T17:08:50.730 [tomcat-shutdown] INFO o.s.b.w.e.t.GracefulShutdown - Graceful shutdown complete 
+2025-10-06T17:08:50.731 [Thread-156] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8099"] 
+2025-10-06T17:08:50.805 [restartedMain] INFO c.u.UtmostApplication - Starting UtmostApplication using Java 17.0.13 with PID 20812 (C:\factory\ws_sts_4281\repo_utmost\utmost\bin\main started by Jun in C:\factory\ws_sts_4281\repo_utmost\utmost) 
+2025-10-06T17:08:50.805 [restartedMain] INFO c.u.UtmostApplication - The following 1 profile is active: "external" 
+2025-10-06T17:08:51.000 [restartedMain] WARN o.m.s.m.ClassPathMapperScanner - No MyBatis mapper was found in '[com.utmost]' package. Please check your configuration. 
+2025-10-06T17:08:51.035 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8099 (http) 
+2025-10-06T17:08:51.035 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8099"] 
+2025-10-06T17:08:51.035 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2025-10-06T17:08:51.035 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46] 
+2025-10-06T17:08:51.054 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2025-10-06T17:08:51.055 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 248 ms 
+2025-10-06T17:08:51.124 [restartedMain] WARN o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false) 
+2025-10-06T17:08:51.135 [restartedMain] WARN o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class 
+2025-10-06T17:08:51.136 [restartedMain] INFO o.a.c.c.StandardService - Stopping service [Tomcat] 
+2025-10-06T17:08:51.142 [restartedMain] INFO o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled. 
+2025-10-06T17:08:51.147 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (the profiles external are currently active).
+ 
+2025-10-06T17:09:39.276 [restartedMain] INFO c.u.UtmostApplication - Starting UtmostApplication using Java 17.0.13 with PID 20812 (C:\factory\ws_sts_4281\repo_utmost\utmost\bin\main started by Jun in C:\factory\ws_sts_4281\repo_utmost\utmost) 
+2025-10-06T17:09:39.276 [restartedMain] INFO c.u.UtmostApplication - The following 1 profile is active: "external" 
+2025-10-06T17:09:39.496 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8099 (http) 
+2025-10-06T17:09:39.497 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8099"] 
+2025-10-06T17:09:39.497 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2025-10-06T17:09:39.497 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46] 
+2025-10-06T17:09:39.515 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2025-10-06T17:09:39.515 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 237 ms 
+2025-10-06T17:09:39.626 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2025-10-06T17:09:39.632 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8099"] 
+2025-10-06T17:09:39.635 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8099 (http) with context path '/' 
+2025-10-06T17:09:39.643 [restartedMain] INFO c.u.UtmostApplication - Started UtmostApplication in 0.395 seconds (process running for 7578.723) 
+2025-10-06T17:09:39.643 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2025-10-06T17:16:40.011 [http-nio-8099-exec-1] INFO o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2025-10-06T17:16:40.011 [http-nio-8099-exec-1] INFO o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2025-10-06T17:16:40.012 [http-nio-8099-exec-1] INFO o.s.w.s.DispatcherServlet - Completed initialization in 1 ms 
+2025-10-06T17:35:27.393 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 11 class path changes (0 additions, 0 deletions, 11 modifications) 
+2025-10-06T17:35:27.393 [Thread-160] INFO o.s.b.w.e.t.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete 
+2025-10-06T17:35:27.394 [tomcat-shutdown] INFO o.a.c.h.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8099"] 
+2025-10-06T17:35:27.463 [tomcat-shutdown] INFO o.s.b.w.e.t.GracefulShutdown - Graceful shutdown complete 
+2025-10-06T17:35:27.463 [Thread-160] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8099"] 
+2025-10-06T17:35:27.533 [restartedMain] INFO c.u.UtmostApplication - Starting UtmostApplication using Java 17.0.13 with PID 20812 (C:\factory\ws_sts_4281\repo_utmost\utmost\bin\main started by Jun in C:\factory\ws_sts_4281\repo_utmost\utmost) 
+2025-10-06T17:35:27.533 [restartedMain] INFO c.u.UtmostApplication - The following 1 profile is active: "external" 
+2025-10-06T17:35:27.733 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8099 (http) 
+2025-10-06T17:35:27.734 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8099"] 
+2025-10-06T17:35:27.734 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2025-10-06T17:35:27.734 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46] 
+2025-10-06T17:35:27.751 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2025-10-06T17:35:27.751 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 217 ms 
+2025-10-06T17:35:27.849 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2025-10-06T17:35:27.854 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8099"] 
+2025-10-06T17:35:27.857 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8099 (http) with context path '/' 
+2025-10-06T17:35:27.861 [restartedMain] INFO c.u.UtmostApplication - Started UtmostApplication in 0.356 seconds (process running for 9126.942) 
+2025-10-06T17:35:27.862 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2025-10-06T17:35:30.948 [http-nio-8099-exec-1] INFO o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2025-10-06T17:35:30.948 [http-nio-8099-exec-1] INFO o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2025-10-06T17:35:30.949 [http-nio-8099-exec-1] INFO o.s.w.s.DispatcherServlet - Completed initialization in 1 ms 
+2025-10-06T17:35:32.717 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2025-10-06T17:35:32.717 [Thread-167] INFO o.s.b.w.e.t.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete 
+2025-10-06T17:35:32.718 [tomcat-shutdown] INFO o.a.c.h.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8099"] 
+2025-10-06T17:35:32.788 [tomcat-shutdown] INFO o.s.b.w.e.t.GracefulShutdown - Graceful shutdown complete 
+2025-10-06T17:35:32.789 [Thread-167] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8099"] 
+2025-10-06T17:35:32.857 [restartedMain] INFO c.u.UtmostApplication - Starting UtmostApplication using Java 17.0.13 with PID 20812 (C:\factory\ws_sts_4281\repo_utmost\utmost\bin\main started by Jun in C:\factory\ws_sts_4281\repo_utmost\utmost) 
+2025-10-06T17:35:32.857 [restartedMain] INFO c.u.UtmostApplication - The following 1 profile is active: "external" 
+2025-10-06T17:35:33.058 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8099 (http) 
+2025-10-06T17:35:33.059 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8099"] 
+2025-10-06T17:35:33.059 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2025-10-06T17:35:33.059 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46] 
+2025-10-06T17:35:33.079 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2025-10-06T17:35:33.079 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 221 ms 
+2025-10-06T17:35:33.175 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2025-10-06T17:35:33.182 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8099"] 
+2025-10-06T17:35:33.185 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8099 (http) with context path '/' 
+2025-10-06T17:35:33.193 [restartedMain] INFO c.u.UtmostApplication - Started UtmostApplication in 0.358 seconds (process running for 9132.274) 
+2025-10-06T17:35:33.194 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2025-10-06T17:35:33.202 [http-nio-8099-exec-2] INFO o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2025-10-06T17:35:33.202 [http-nio-8099-exec-2] INFO o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2025-10-06T17:35:33.202 [http-nio-8099-exec-2] INFO o.s.w.s.DispatcherServlet - Completed initialization in 0 ms 

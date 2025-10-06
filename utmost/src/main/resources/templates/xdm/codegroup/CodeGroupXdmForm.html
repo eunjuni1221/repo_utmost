@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ko">
+<!--begin::Head-->
+<div th:replace="~{xdm/include/head :: head}"></div>
+<main class="app-main">
+    <!--begin::App Content Header-->
+    <div class="app-content-header">
+        <!--begin::Container-->
+        <div class="container-fluid">
+            <!--begin::Row-->
+            <div class="row">
+                <div class="col-sm-6">
+                    <h3 class="mb-0">CodeGroup</h3>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-end">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">CodeGroup</li>
+                    </ol>
+                </div>
+            </div>
+            <!--end::Row-->
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::App Content Header-->
+    <!--begin::App Content-->
+    <div class="app-content">
+        <!--begin::Container-->
+        <div class="container-fluid">
+            <!-- Timelime example  -->
+            <div class="row">
+                <div class="col-12">
+                    <!-- The icons -->
+                    <div class="col-12">
+                        <div class="card card-primary card-outline">
+                            <div class="card-header">
+                                <h3 class="card-title">기본정보</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="row g-3">
+                                    <div class="col-md-3">
+                                        <form action="/xdm/codegroup/CodeGroupXdmInst" method="post"
+                                            enctype="multipart/form-data" id="form" name="form" class="needs-validation"
+                                            novalidate>
+                                            <label class="form-label">코드그룹 코드<span class="text-danger"> *</span></label>
+                                            <input type="hidden" id="cgSeq" name="cgSeq" th:value="${item?.cgSeq}"
+                                                maxlength="20" placeholder="자동생성" class="form-control" />
+                                            <input type="text" name="cgSeq" id="cgSeq" th:value="${item?.cgSeq}"
+                                                class="form-control" placeholder="자동생성" disabled readonly
+                                                style="background-color: grey;">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="form-label">코드그룹 코드(ANOTHER)<span
+                                                class="text-danger"></span></label>
+                                        <input type="text" class="form-control" placeholder="영대소문자, 숫자">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="form-label">코드그룹 이름<span class="text-danger"> *</span></label>
+                                        <input type="text" name="cgName" id="cgName" th:value="${item?.cgName}"
+                                            class="form-control" placeholder="영대소문자, 숫자" required>
+                                        <div class="invalid-feedback" id="nameError">
+                                            이름을 입력하세요.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="form-label">코드그룹 이름(영문)<span class="text-danger"></span></label>
+                                        <input type="text" name="cgNameEng" id="cgNameEng" th:value="${item?.cgNameEng}"
+                                            class="form-control" placeholder="영대소문자, 숫자">
+                                    </div>
+                                </div>
+
+
+                                <div class="row g-3 mt-1">
+                                    <div class="col-md-3">
+                                        <label class="form-label">사용여부 <span class="text-danger"> *</span></label>
+                                        <select class="form-select" name="cgUse" id="cgUse" th:value="${item?.cgUse}">
+                                            <option selected value="1">사용</option>
+                                            <option value="0">미사용</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="form-label">순서<span class="text-danger"> *</span></label>
+                                        <input type="text" name="cgOrder" id="cgOrder" th:value="${item?.cgOrder}"
+                                            class="form-control" placeholder="" required>
+                                    </div>
+                                </div>
+                                <div class="row g-3 mt-1">
+                                    <div class="col-md-6">
+                                        <label class="form-label">설명</label>
+                                        <textarea class="form-control" rows="3" style="resize: both;"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="mt-3 d-flex">
+                                    <button type="button" class="btn btn-light"
+                                        onclick="window.location.href='CodeGroupXdmList';">
+                                        <i class="fa-solid fa-list"></i>
+                                    </button>
+
+                                    <div class="ms-auto d-flex gap-1">
+                                        <button type="button" id="btnDelete" class="btn btn-danger"><i
+                                                class="fa fa-times"></i></button>
+                                        <button type="button" id="btnUelete" class="btn btn-danger"><i
+                                                class="fa fa-trash"></i></button>
+                                        <button type="button" id="btnSave" class="btn btn-primary">
+                                            <i class="fa-solid fa-database"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                </form>
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!--end::Container-->
+                </div>
+                <!--end::App Content-->
+</main>
+<!--end::App Main-->
+<div th:replace="~{xdm/include/footer :: footer}"></div>
+
+<script src="/xdm/AdminLTE/js/includeXdmForm.js"></script>
+
+<script>
+    const goXdmInst = "CodeGroupXdmInst";
+    const goXdmUpdt = "CodeGroupXdmUpdt";
+
+
+    let cgSeq = document.getElementById("input[name=cgSeq]");
+
+    let cgName = document.getElementById('cgName');
+
+    document.getElementById("btnSave").onclick = function () {
+
+        function validation() {
+            let isValid = true;
+
+            // 코드그룹 이름이 비어있는지 확인
+            let cgName = document.getElementById('cgName');
+            let cgNameError = document.getElementById('nameError');
+            if (cgName.value.trim() === "") {
+                cgNameError.textContent = "코드그룹 이름을 입력하세요.";
+                cgName.classList.add("is-invalid");
+                isValid = false;
+            } else {
+                cgNameError.textContent = "";
+                cgName.classList.remove("is-invalid");
+            }
+
+
+            return isValid; // 유효성 검사 결과 반환
+        }
+
+        // 유효성 검사 실행
+        if (!validation()) {
+            return; // 유효성 검사 실패 시 폼 제출 중단
+        }
+
+        // 폼 제출
+        const form = document.querySelector("form"); // 폼 객체 가져오기
+        const cgSeq = document.getElementById("cgSeq");
+
+        if (cgSeq.value === "0" || cgSeq.value === "") {
+            form.action = goXdmInst; // 새로운 코드그룹 생성
+        } else {
+            form.action = "/codegroup/CodeGroupXdmUpdt"; // 기존 코드그룹 업데이트
+        }
+
+        // 폼 제출
+        form.submit();
+    };
+
+
+</script>
+</body>
+<!--end::Body-->
+
+</html>

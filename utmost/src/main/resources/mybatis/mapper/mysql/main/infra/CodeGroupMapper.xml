@@ -5,4 +5,87 @@
 
 <resultMap id="resultMapObj" type="com.utmost.module.codegroup.CodeGroupDto"></resultMap>
 
+	<sql id="selectCommon">
+		from
+		codegroup as a
+		where 1=1
+		
+		<if test="shUseNy != null and !shUseNy.equals('')">AND a.cgUse = #{shUseNy}</if>
+        <if test="shDelNy != null and !shDelNy.equals('')">AND a.cgdelNy = #{shDelNy}</if>
+ 				
+		<choose>
+			<when test="shOptionDate == 1">AND a.cgRegDate BETWEEN #{shDateStart} AND #{shDateEnd}</when>
+			<when test="shOptionDate == 2">AND a.cgEdDate BETWEEN #{shDateStart} AND #{shDateEnd}</when>
+		</choose>
+				
+        <choose>
+            <when test="shOption == 1">AND a.cgSeq = #{shValue}</when>
+            <when test="shOption == 2">AND a.cgName LIKE CONCAT('%',#{shValue},'%')</when>
+            <when test="shOption == 3">AND a.cgNameEng LIKE CONCAT('%',#{shValue},'%')</when>
+        </choose> 
+	</sql>
+
+	<select id="selectList" resultMap="resultMapObj">
+			select
+			a.cgSeq,
+			a.cgdelNy,
+			a.cgUse,
+		    a.cgName,
+		    a.cgNameEng,
+		    (select count(aa.cdSeq) from code aa where 1=1 and aa.cdDelNy = 0 and aa.codeGroup_cgSeq = a.cgSeq) as cdSeqCount,
+		    a.cgOrder,
+		    a.cgRegDate,
+		    a.cgEdDate
+<include refid="selectCommon"/>
+		order by cgSeq desc
+		limit #{rowNumToShow} offset #{startRnumForMysql}
+	</select>
+	
+		  	<select id="selectOne" resultMap="resultMapObj">
+		select
+			a.cgSeq,
+			a.cgdelNy,
+			a.cgUse,
+		    a.cgName,
+		    a.cgNameEng,
+		    (select count(aa.cdSeq) from code aa where 1=1 and aa.cdDelNy = 0 and aa.codeGroup_cgSeq = a.cgSeq) as cdSeqCount,
+		    a.cgOrder,
+		    a.cgRegDate,
+		    a.cgEdDate
+				from
+				codegroup as a 		
+				where 1=1
+			AND a.cgSeq = #{cgSeq}
+				
+	</select>
+	
+			<insert id= "insert" parameterType="com.utmost.module.codegroup.CodeGroupDto">
+		INSERT INTO codegroup (
+			cgUse,
+		    cgName,
+		    cgNameEng,
+		    cgOrder,
+		    cgRegDate,
+		    cgdelNy
+		    
+			) values (
+				#{cgUse},
+				#{cgName},
+				#{cgNameEng},
+				#{cgOrder},
+				NOW(),
+				0				
+			)
+		<selectKey resultType= "String" keyProperty="cgSeq" order="AFTER">
+			SELECT last_insert_id()
+		</selectKey>
+	</insert>
+	
+	<select id="selectOneCount" resultType="Integer">
+	
+		Select count(*)
+	<include refid="selectCommon"/>
+	
+	</select>
+
 </mapper>
