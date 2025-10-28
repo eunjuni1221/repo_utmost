@@ -26,4 +26,7 @@ public class CodeGroupService {
 	public int selectOneCount(CodeGroupVo vo) {
 		return dao.selectOneCount(vo);
 	}
+	public int update(CodeGroupDto dto) {
+		return dao.update(dto);
+	}
 }

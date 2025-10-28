@@ -13,4 +13,5 @@ public interface CodeGroupDao {
 	public CodeGroupDto selectOne(CodeGroupDto dto);
 	public int insert(CodeGroupDto dto);
 	public int selectOneCount(CodeGroupVo vo);
+	public int update(CodeGroupDto dto);
 }

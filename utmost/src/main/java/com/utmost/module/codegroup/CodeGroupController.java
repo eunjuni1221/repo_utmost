@@ -10,21 +10,18 @@ import com.utmost.module.base.BaseController;
 import jakarta.servlet.http.HttpSession;
 
 @Controller
+@RequestMapping(value = "/xdm/codegroup/")
 public class CodeGroupController extends BaseController{
 
 	
 	@Autowired
 	CodeGroupService service;
 	
-	@RequestMapping(value = "/xdm/codegroup/CodeGroupXdmList")
+	@RequestMapping(value = "CodeGroupXdmList")
 	public String codegroupXdmList(Model model, CodeGroupVo vo, CodeGroupDto dto,
 			HttpSession httpSession) throws Exception{
 		setSearch(vo);
-//			
-//		if(httpSession.getAttribute("sessXdmSeq") == null) {
-//			return "redirect:/login/Login"; 
-//		}
-//		
+		
 		System.out.println(vo.getThisPage());
 		vo.setParamsPaging(service.selectOneCount(vo));
 	
@@ -36,7 +33,7 @@ public class CodeGroupController extends BaseController{
 	return "xdm/codegroup/CodeGroupXdmList"; 
 	}
 	
-	@RequestMapping(value = "/xdm/codegroup/CodeGroupXdmForm")
+	@RequestMapping(value = "CodeGroupXdmForm")
 	public String codegroupXdmForm(Model model, CodeGroupVo vo, CodeGroupDto dto,
 			HttpSession httpSession) throws Exception{
 		
@@ -44,15 +41,23 @@ public class CodeGroupController extends BaseController{
 //			insert mode
 		} else {
 //			update mode
-			// model.addAttribute("item", service.selectOne(codeGroupDto));
+			 model.addAttribute("item", service.selectOne(dto));
 		}
 	return "xdm/codegroup/CodeGroupXdmForm"; 
 	}
 	
-	@RequestMapping(value = "/xdm/codegroup/CodeGroupXdmInst")
+	@RequestMapping(value = "CodeGroupXdmInst")
 	public String codegroupXdmInst(CodeGroupDto dto) {
 		
 		service.insert(dto);
+		
+	return "redirect:CodeGroupXdmList"; 
+	}
+	
+	@RequestMapping(value = "CodeGroupXdmUpdt")
+	public String codeGroupXdmUpdt(CodeGroupDto dto) {
+		
+		service.update(dto);
 		
 	return "redirect:CodeGroupXdmList"; 
 	}

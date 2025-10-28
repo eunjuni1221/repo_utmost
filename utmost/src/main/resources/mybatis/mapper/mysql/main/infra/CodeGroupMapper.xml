@@ -41,7 +41,7 @@
 		limit #{rowNumToShow} offset #{startRnumForMysql}
 	</select>
 	
-		  	<select id="selectOne" resultMap="resultMapObj">
+	<select id="selectOne" resultMap="resultMapObj">
 		select
 			a.cgSeq,
 			a.cgdelNy,
@@ -59,7 +59,7 @@
 				
 	</select>
 	
-			<insert id= "insert" parameterType="com.utmost.module.codegroup.CodeGroupDto">
+	<insert id= "insert" parameterType="com.utmost.module.codegroup.CodeGroupDto">
 		INSERT INTO codegroup (
 			cgUse,
 		    cgName,
@@ -82,10 +82,18 @@
 	</insert>
 	
 	<select id="selectOneCount" resultType="Integer">
-	
 		Select count(*)
-	<include refid="selectCommon"/>
-	
+		<include refid="selectCommon"/>	
 	</select>
+	
+	<update id="update">
+		UPDATE codegroup SET
+			cgUse = #{cgUse}
+			,cgName = #{cgName}
+			,cgNameEng = #{cgNameEng}
+			,cgEdDate = now()
+		WHERE
+			cgSeq = #{cgSeq}
+	</update>
 
 </mapper>
